@@ -11,7 +11,7 @@
     "seed": "cd server && npm run seed",
     "heroku-postbuild": "cd client && npm run build"
   },
-  "author": "Priya Ravi",
+  "author": "Trevor J Pino",
   "license": "ISC",
   "dependencies": {
     "if-env": "^1.0.4"

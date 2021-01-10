@@ -1,4 +1,5 @@
-# Add Usability   
+# Add Usability  
+* when the name in nav is clicked returns to the homepage
 * add in review ability  
 * add ability to comment on reviews  
 * look at past reviews and comments

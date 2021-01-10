@@ -5,11 +5,11 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Flower' },
+    { name: 'Edibles' },
+    { name: 'Tinctures' },
+    { name: 'Concentrates' },
+    { name: 'Topicals' }
   ]);
 
   console.log('categories seeded');

@@ -91,7 +91,7 @@ db.once('open', async () => {
     },
     {
       name: 'LA Wedding Pop Live Resin Budder 1g',
-      category: categories[4]._id,
+      category: categories[3]._id,
       description: 'LA Wedding Pop is an indica-dominant hybrid strain full of earthy notes and bright spruce. A soft fuel upon first inhale breaks down to sweet and citrus. This relaxing and centering hybrid is the perfect choice for an afternoon of serenity, clarity, focus and relaxation.',
       image: 'concentrateLAWedding.jpg',
       price: 70.00,
@@ -99,7 +99,7 @@ db.once('open', async () => {
     },
     {
       name: 'Lemon Bean Live Resin Budder 1g',
-      category: categories[4]._id,
+      category: categories[3]._id,
       description:
         'Citrus-forward and refreshing, Lemon Bean is a cross between Lemon Tree and OG Eddy. Sweet and zesty lemon aromas pair with sweet and hoppy notes on tha palate. Effects onset like a Sativa initially, and give way to a tingly, relaxing sensation.',
       image: 'concentrateLiveRise.jpg',
@@ -122,6 +122,15 @@ db.once('open', async () => {
         'Growers decided to name this 70% indica variety after the infamous song by AC/DC, Hell’s Bells. This devilish strain arose after a Kuchi male pollinated Strawberry Sour Diesel. Together they produced Hell’s Bells, a variety which allows the consumer to meditate and chill with dark and dank forces. The earthy Kush genetics are inherent in this strain, exuding classic hash-like aromas and flavors. During late flowering, the leaves can take on dark hues, which look super cool. The flowering period lasts for 55-65 days. After the plant has been harvested, Hell’s Bells contains around 19-21% THC. It’s recognized as a stable strain, the phenotypes will not differ much from each other. Growers can experience really colorful plants, with various shades of purple and red mixing along the plant.',
       image: 'hellsBells.jpg',
       price: 39.99,
+      quantity: 100
+    },
+    {
+      name: "AVEXIA 1:1 Pain Relief Lotion",
+      category: categories[4]._id,
+      description:
+        "Verano's Avexia Epsom Salt Soak and Pain Relief Balm both contain Tetrahydrocannabinol (THC) which is the most abundant compound and occurs naturally in the cannabis plant. When combined with all natural elements and oils in a topical formulation, it’s a great method of relief, adding a therapeutic touch to a relaxing soak in the bath or a soothing massage after a long day of work.",
+      image: 'avexia.jpg',
+      price: 29.99,
       quantity: 100
     }
   ]);

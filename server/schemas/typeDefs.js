@@ -16,6 +16,13 @@ const typeDefs = gql`
     category: Category
   }
 
+  type Review {
+    _id: ID
+    reviewText: String
+    createdAt: String
+    firstName: String
+  }
+
   type Order {
     _id: ID
     purchaseDate: String

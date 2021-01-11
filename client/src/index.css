@@ -96,7 +96,7 @@ button {
   outline: none;
   cursor: pointer;
   margin: 0 1px;
-  background-color: var(--secondary);
+  background-color: rgb(136, 199, 136);
 }
 
 button:hover {

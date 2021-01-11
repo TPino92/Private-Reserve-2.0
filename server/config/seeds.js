@@ -18,111 +18,111 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Bio Jesus',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+        'Bio-Jesus is a hybrid marijuana strain known for its numbing potency and exceptional pain relief application. This strain is made by crossing Gumbo with Bio-Diesel. Bio-Jesus produces intense body effects and a euphoric haze that is ideal for nighttime use. Medical marijuana patients choose this strain to help relieve symptoms associated with insomnia.',
+      image: 'bioJesus.jpg',
       category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
-    },
-    {
-      name: 'Canned Coffee',
-      description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
-      category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
-    },
-    {
-      name: 'Toilet Paper',
-      category: categories[1]._id,
-      description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
-      quantity: 20
-    },
-    {
-      name: 'Handmade Soap',
-      category: categories[1]._id,
-      description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
+      price: 40.00,
       quantity: 50
     },
     {
-      name: 'Set of Wooden Spoons',
+      name: 'Girl Scout Cookies',
+      description:
+        'GSC, formerly known as Girl Scout Cookies, is an OG Kush and Durban Poison hybrid cross whose reputation grew too large to stay within the borders of its California homeland. With a sweet and earthy aroma, GSC launches you to euphoria’s top floor where full-body relaxation meets a time-bending cerebral space. A little goes a long way with this hybrid, whose THC heights have won GSC numerous Cannabis Cup awards. Patients needing a strong dose of relief, however, may look to GSC for severe pain, nausea, and appetite loss. There are several different phenotypes of the GSC strain including Thin Mint and Platinum GSC, which exhibit some variation in appearance and effect. Typically, however, GSC expresses its beauty in twisting green calyxes wrapped in purple leaves and fiery orange hairs. Patients and consumers looking to cultivate this cannabis staple themselves should wait 9 to 10 weeks for their indoor plants to finish flowering.',
+      image: 'girlScoutCookies.jpg',
+      category: categories[0]._id,
+      price: 45.00,
+      quantity: 50
+    },
+    {
+      name: "Mindy's Honey Sweet Melon",
       category: categories[1]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
+        'Pectin-based Pate de Fruit squares in 11 sweet and tart flavors infused with RSO, Sativa, Indica, Hybrid and CBD oils. Available as single 25mg THC pieces and 100mg THC packs – 4-packs at 25mg THC each and 10-packs at 10mg THC pieces each. Gluten Free and Vegetarian Friendly.',
+      image: 'mindys.jpg',
+      price: 25.00,
+      quantity: 20
+    },
+    {
+      name: 'Dark Chocolate Peppermint Bark',
+      category: categories[1]._id,
+      description:
+        "James Beard award-winning master chef Mindy Segal has created precisely dosed, decadently delicious artisanal edibles to delight your tastebuds and invigorate your soul. Each flavor highlights a distinct memory for Mindy's culinary journey. A blend of rich, luscious dark milk chocolate with smooth white chocolate ganache drizzle, topped with crushed peppermints. A perfect holiday treat.",
+      image: 'mindysChocolate.jpg',
+      price: 22.00,
+      quantity: 50
+    },
+    {
+      name: 'Freshly Picked Berries',
+      category: categories[1]._id,
+      description:
+        'Flavors of just-picked sweet strawberries and blueberries with mulberries & huckleberries from the Pacific Northwest. Jammy with a touch of orange blossom.',
+      image: 'mindysBerries.jpg',
+      price: 20.00,
       quantity: 100
     },
     {
-      name: 'Camera',
+      name: 'Grassroots Tincture 1000mg CBD / 100mg',
       category: categories[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
+        '(1000mg CBD/100mg THC)',
+      image: 'grassrootsTincture.jpg',
+      price: 55.00,
       quantity: 30
     },
     {
-      name: 'Tablet',
+      name: 'Relief Tincture 1:1 30ml',
       category: categories[2]._id,
       description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
+        '"Remedi Relief delivers a formulation that works with your body, so that you can get back to what matters most Handpicked cannabis. Easy to dose. Tinctures can be fast acting. Individual results may vary."',
+      image: 'tincture.jpg',
+      price: 30.00,
       quantity: 30
     },
     {
-      name: 'Tales at Bedtime',
+      name: 'Face Mints Live Resin Budder 1g',
       category: categories[3]._id,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
-      price: 9.99,
+        'A cross between Face Off OG and Kush Mint, Face Mints is a powerful indica with strong sedative effects and nice orange and cinnamon flavors. Beware, Face Mints is not for the faint of heart. This strain is usually best kept for the end of the day due to its strong psychoactive effects and heavy couch lock some enthusiasts report.',
+      image: 'concentrateLiveBudder.jpg',
+      price: 67.00,
       quantity: 100
     },
     {
-      name: 'Spinning Top',
+      name: 'LA Wedding Pop Live Resin Budder 1g',
       category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000
-    },
-    {
-      name: 'Set of Plastic Horses',
-      category: categories[4]._id,
-      description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000
-    },
-    {
-      name: 'Teddy Bear',
-      category: categories[4]._id,
-      description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
+      description: 'LA Wedding Pop is an indica-dominant hybrid strain full of earthy notes and bright spruce. A soft fuel upon first inhale breaks down to sweet and citrus. This relaxing and centering hybrid is the perfect choice for an afternoon of serenity, clarity, focus and relaxation.',
+      image: 'concentrateLAWedding.jpg',
+      price: 70.00,
       quantity: 100
     },
     {
-      name: 'Alphabet Blocks',
+      name: 'Lemon Bean Live Resin Budder 1g',
       category: categories[4]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
-      quantity: 600
+        'Citrus-forward and refreshing, Lemon Bean is a cross between Lemon Tree and OG Eddy. Sweet and zesty lemon aromas pair with sweet and hoppy notes on tha palate. Effects onset like a Sativa initially, and give way to a tingly, relaxing sensation.',
+      image: 'concentrateLiveRise.jpg',
+      price: 62.00,
+      quantity: 100
+    },
+    {
+      name: 'Pineapple Express',
+      category: categories[0]._id,
+      description:
+        'Pineapple Express is one of the world’s most famous and loved cannabis strains. Bred from an inspired Trainwreck x Hawaiian pairing, the buds in this pre-roll are dense and olive colored, with a nice coating of trichomes. The delicious fragrance is of fresh-cut pineapple with tropical fruit undertones, and the flavor adds a wonderful sweetness to the experience.',
+      image: 'GB-Pineapple-Express.jpg',
+      price: 27.99,
+      quantity: 100
+    },
+    {
+      name: "Hell’s Bells",
+      category: categories[0]._id,
+      description:
+        'Growers decided to name this 70% indica variety after the infamous song by AC/DC, Hell’s Bells. This devilish strain arose after a Kuchi male pollinated Strawberry Sour Diesel. Together they produced Hell’s Bells, a variety which allows the consumer to meditate and chill with dark and dank forces. The earthy Kush genetics are inherent in this strain, exuding classic hash-like aromas and flavors. During late flowering, the leaves can take on dark hues, which look super cool. The flowering period lasts for 55-65 days. After the plant has been harvested, Hell’s Bells contains around 19-21% THC. It’s recognized as a stable strain, the phenotypes will not differ much from each other. Growers can experience really colorful plants, with various shades of purple and red mixing along the plant.',
+      image: 'hellsBells.jpg',
+      price: 39.99,
+      quantity: 100
     }
   ]);
 

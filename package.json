@@ -11,7 +11,7 @@
     "seed": "cd server && npm run seed",
     "heroku-postbuild": "cd client && npm run build"
   },
-  "author": "Trevor J Pino",
+  "author": "Trevor J Pino, Brandi Curley, Jesus Manteca, Fabian Ingram",
   "license": "ISC",
   "dependencies": {
     "graphql": "^15.4.0",

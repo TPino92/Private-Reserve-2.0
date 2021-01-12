@@ -232,4 +232,12 @@ ul {
   .navstyle {
     margin-left: 0;
   }
+  .catDiv {
+    position: relative;
+  }
+  .catButton {
+    display: block;
+    padding-top: 5px;
+    margin-top: 5px;
+  }
 }

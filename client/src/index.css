@@ -203,6 +203,10 @@ input:focus {
   color: var(--error);
 }
 
+ul {
+  color: var(--primary)
+}
+
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;

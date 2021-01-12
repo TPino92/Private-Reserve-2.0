@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import { ADD_REVIEW } from '../../utils/mutations';
 
-const ReviewForm = ({ thoughtId }) => {
+const ReviewForm = ({ productId }) => {
   const [reviewBody, setBody] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
   const [addReview, { error }] = useMutation(ADD_REVIEW);
@@ -22,7 +22,7 @@ const ReviewForm = ({ thoughtId }) => {
 
     try {
       await addReview({
-        variables: { reviewBody, productId }
+        variables: { reviewBody }
       });
 
       // clear form value
@@ -36,7 +36,6 @@ const ReviewForm = ({ thoughtId }) => {
   return (
     <div>
       <p className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}>
-        Character Count: {characterCount}/280
         {error && <span className="ml-2">Something went wrong...</span>}
       </p>
       <form
@@ -51,11 +50,10 @@ const ReviewForm = ({ thoughtId }) => {
         ></textarea>
 
         <button className="btn col-12 col-md-3" type="submit">
-          Submit
+          Add Review
         </button>
       </form>
 
-      {error && <div>Something went wrong...</div>}
     </div>
   );
 };

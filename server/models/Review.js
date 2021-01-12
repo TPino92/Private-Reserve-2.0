@@ -1,23 +1,22 @@
-const { Schema, model } = require('mongoose');
+const { Schema } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const reviewSchema = new Schema(
   {
-    reviewText: {
+    reviewBody: {
       type: String,
-      required: 'You need to leave a Review!',
-      minlength: 1,
+      required: true,
       maxlength: 280
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: timestamp => dateFormat(timestamp)
     },
     firstName: {
       type: String,
       required: true
     },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+      get: timestamp => dateFormat(timestamp)
+    }
   },
   {
     toJSON: {
@@ -26,10 +25,4 @@ const reviewSchema = new Schema(
   }
 );
 
-reviewSchema.virtual('reviewCount').get(function() {
-  return this.reviews.length;
-});
-
-const Review = model('review', reviewSchema);
-
-module.exports = Review;
+module.exports = reviewSchema;

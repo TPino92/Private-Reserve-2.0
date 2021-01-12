@@ -14,6 +14,8 @@ import {
 } from '../utils/actions';
 
 import Cart from '../components/Cart';
+import ReviewList from '../components/ReviewList';
+import ReviewForm from '../components/ReviewForm';
 
 import { idbPromise } from "../utils/helpers";
 
@@ -32,6 +34,7 @@ function Detail() {
 
   const { products, cart } = state;
 
+    
   useEffect(() => {
     // already in global store
     if (products.length) {
@@ -58,6 +61,10 @@ function Detail() {
       });
     }
   }, [products, data, loading, dispatch, id]);
+
+  const addReview = () => {
+
+  }
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id)
@@ -108,6 +115,9 @@ function Detail() {
           </p>
 
           <p>
+            {currentProduct.reviews}
+          </p>
+          <p>
             <strong>Price:</strong>
             ${currentProduct.price}
             {" "}
@@ -118,12 +128,15 @@ function Detail() {
               >
                 Remove from Cart
               </button>
+              <ReviewForm />
+              <ReviewList />
           </p>
 
           <img
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
           />
+
         </div>
       ) : null}
       {

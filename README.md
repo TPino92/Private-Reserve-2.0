@@ -42,3 +42,42 @@ The project itself is due on the Sunday following group presentations. Each memb
 The URL of the deployed application.
 The URL of the GitHub repository, with a unique name and a README describing the project.
 The URL of your portfolio, with your project added to it.
+
+# Title: Private Reserve 2.0
+    
+## Description 
+A full-stack MERN application that allows users to view THC products and add to a shopping cart. Users can also submit reviews on individual products. Users must login to be able to put products into a shopping cart and submit reviews. 
+
+
+## Table of Contents 
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+
+
+## Installation 
+Git clone the repo and in the root directory in terminal, install the dependency packages by typing "npm install". This will allow you to view the app in the local host server.
+
+## Usage 
+Please visit the live-deployed website at Heroku, by clicking the following link:
+
+### insert link here
+    
+## Credits 
+UofA coding Bootcamp
+
+## License 
+MongoDB, Mongoose, Express, React.js, Node.js, Heroku
+
+## Contributing 
+Contributions to this app were made by the following:
+<br /> 
+
+### Trevor Pino 
+### Jesus Manteca
+### Fabian Ingram
+### Brandi Curley
+
+
+

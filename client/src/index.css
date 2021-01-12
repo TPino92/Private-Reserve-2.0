@@ -87,6 +87,11 @@ header a {
   color: var(--light);
 }
 
+header h1 {
+  text-align: center;
+  padding-top: 15px;
+}
+
 .navstyle ul {
   list-style-type: none;
   overflow: hidden;

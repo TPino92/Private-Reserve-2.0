@@ -40,7 +40,7 @@ function Nav() {
   }
 
   return (
-    <header className="px-1">
+    <header>
         <h1>
           <Link to="/">
             <span role="img"></span>

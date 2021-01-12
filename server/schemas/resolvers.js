@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Product, Category, Order } = require('../models');
+const { User, Product, Category, Order, Review } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -107,6 +107,31 @@ const resolvers = {
       }
 
       throw new AuthenticationError('Not logged in');
+    },
+    // addReview: async (parent, args, context) => {
+    //   if (context.product._id) {
+    //     const review = await Product.findByIdAndUpdate(
+    //       {_id: context.product._id},
+    //       { $push: { reviews: review._id}},
+    //       {new: true}
+    //     )
+    //     return review;
+    //   }
+    // },
+    addReview: async (parent, args, context) => {
+      if (context.user) {
+        const review = await Review.create({ ...args, firstName: context.user.firstName });
+
+        await Product.findByIdAndUpdate(
+          { _id: context.product._id },
+          { $push: { reviews: review._id } },
+          { new: true }
+        );
+
+        return review;
+      }
+
+      throw new AuthenticationError('You need to be logged in!');
     },
     updateUser: async (parent, args, context) => {
       if (context.user) {

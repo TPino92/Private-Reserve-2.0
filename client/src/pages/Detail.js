@@ -128,9 +128,9 @@ function Detail() {
               >
                 Remove from Cart
               </button>
-              <ReviewForm />
-              <ReviewList />
           </p>
+          <ReviewForm />
+            <ReviewList />
 
           <img
             src={`/images/${currentProduct.image}`}

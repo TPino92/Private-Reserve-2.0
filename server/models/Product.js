@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const reviewSchema = require('./Review');
+const Review = require('./Review');
 const { Schema } = mongoose;
 
 const productSchema = new Schema({
@@ -29,7 +29,7 @@ const productSchema = new Schema({
     ref: 'Category',
     required: true
   },
-  reviews: [reviewSchema]
+  reviews: [Review]
 });
 
 //productSchema.virtual('reviewCount').get(function() {

@@ -7,7 +7,7 @@ function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="flex-row">
+        <ul>
           <li className="mx-1">
             <Link to="/orderHistory">
               Order History
@@ -23,7 +23,7 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row">
+        <ul>
           <li className="mx-1">
             <Link to="/signup">
               Signup
@@ -40,17 +40,17 @@ function Nav() {
   }
 
   return (
-    <header className="flex-row px-1">
-      <h1>
-        <Link to="/">
-          <span role="img" aria-label="shopping bag"></span>
-          Private Reserve
-        </Link>
-      </h1>
+    <header>
+        <h1>
+          <Link to="/">
+            <span role="img"></span>
+            Private Reserve
+          </Link>
+        </h1>
 
-      <nav>
-        {showNavigation()}
-      </nav>
+        <nav className="navstyle">
+          {showNavigation()}
+        </nav>
     </header>
   );
 }

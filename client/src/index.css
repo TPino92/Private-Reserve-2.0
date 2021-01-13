@@ -76,7 +76,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #DA7B93;
 }
 
 header {
@@ -85,6 +85,24 @@ header {
 
 header a {
   color: var(--light);
+}
+
+header h1 {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.navstyle ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.navstyle li {
+  float: right;
+}
+
+.navstyle li a {
+  display: block;
 }
 
 button {
@@ -210,5 +228,16 @@ ul {
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
+  }
+  .navstyle {
+    margin-left: 0;
+  }
+  .catDiv {
+    position: relative;
+  }
+  .catButton {
+    display: block;
+    padding-top: 5px;
+    margin-top: 5px;
   }
 }

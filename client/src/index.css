@@ -19,7 +19,10 @@ body {
 }
 
 body {
+  height: 100vh;
   margin: 0;
+  display: grid;
+  place-items: center;
   padding: 0;
   font-family: 'Karla', sans-serif;
   font-weight: 400;
@@ -205,6 +208,24 @@ input:focus {
 
 ul {
   color: var(--primary)
+}
+
+.box {
+  width: 300px;
+    font-size: 20px;
+    margin: 0 0 1rem 0;
+}
+.w-6 {
+  width: 1.5em;
+}
+.h-6 {
+  height: 1.5em;
+}
+.flex {
+  display: flex;
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {

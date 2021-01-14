@@ -4,8 +4,10 @@ import { useQuery } from '@apollo/react-hooks';
 
 import { QUERY_PRODUCTS } from "../utils/queries";
 import spinner from '../assets/spinner.gif'
+import Stars from '../components/Stars'
 
 // import { useStoreContext } from "../utils/GlobalState";
+
 import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
@@ -18,6 +20,7 @@ import Cart from '../components/Cart';
 import { idbPromise } from "../utils/helpers";
 
 import { useSelector, useDispatch } from "react-redux";
+
 
 function Detail() {
   // const [state, dispatch] = useStoreContext();
@@ -106,7 +109,9 @@ function Detail() {
           <p>
             {currentProduct.description}
           </p>
-
+          <div>
+          <Stars/>
+          </div>
           <p>
             <strong>Price:</strong>
             ${currentProduct.price}

@@ -43,7 +43,6 @@ function Nav() {
     <header>
         <h1>
           <Link to="/">
-            <span role="img"></span>
             Private Reserve
           </Link>
         </h1>

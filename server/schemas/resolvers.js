@@ -127,7 +127,6 @@ const resolvers = {
           { $push: { reviews: review._id } },
           { new: true }
         );
-
         return review;
       }
 

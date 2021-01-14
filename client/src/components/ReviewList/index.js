@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
-const ReviewList = ({ reviews, title }) => {
-  if (!reviews) {
-    return <h3>No reviews Yet</h3>;
+const ReviewList = ({ review, title }) => {
+  if (!review) {
+    return <h3>No review Yet</h3>;
   }
 
   return (
     <div>
-      <h3>Previous Reviews</h3>
+      <h3>Previous review</h3>
      
     </div>
   );

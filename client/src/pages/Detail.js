@@ -62,9 +62,6 @@ function Detail() {
     }
   }, [products, data, loading, dispatch, id]);
 
-  const addReview = () => {
-
-  }
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id)
@@ -115,7 +112,7 @@ function Detail() {
           </p>
 
           <p>
-            {currentProduct.reviews}
+            {currentProduct.review}
           </p>
           <p>
             <strong>Price:</strong>
@@ -130,7 +127,7 @@ function Detail() {
               </button>
           </p>
           <ReviewForm />
-            <ReviewList />
+          <ReviewList />
 
           <img
             src={`/images/${currentProduct.image}`}

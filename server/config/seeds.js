@@ -24,7 +24,11 @@ db.once('open', async () => {
       image: 'bioJesus.jpg',
       category: categories[0]._id,
       price: 40.00,
-      quantity: 50
+      quantity: 50,
+      review: {
+        reviewBody: 'I Loved it',
+        firstName: 'User'
+      }
     },
     {
       name: 'Girl Scout Cookies',

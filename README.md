@@ -1,8 +1,8 @@
 # Add Usability  
 * when the name in nav is clicked returns to the homepage
 * add in review ability  
-* add ability to comment on reviews  
-* look at past reviews and comments
+* add ability to comment on review  
+* look at past review and comments
     
 ## Categories  
 * flower
@@ -46,7 +46,7 @@ The URL of your portfolio, with your project added to it.
 # Title: Private Reserve 2.0
     
 ## Description 
-A full-stack MERN application that allows users to view THC products and add to a shopping cart. Users can also submit reviews on individual products. Users must login to be able to put products into a shopping cart and submit reviews. 
+A full-stack MERN application that allows users to view THC products and add to a shopping cart. Users can also submit review on individual products. Users must login to be able to put products into a shopping cart and submit review. 
 
 
 ## Table of Contents 

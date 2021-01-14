@@ -1,7 +1,8 @@
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
+const mongoose = require('mongoose');
 
-const Review = new Schema(
+const reviewSchema = new Schema(
   {
     reviewBody: {
       type: String,
@@ -25,4 +26,9 @@ const Review = new Schema(
   }
 );
 
-module.exports = Review;
+
+module.exports = reviewSchema;
+
+// const Review = mongoose.model('Review', reviewchema);
+
+// module.exports = Review;

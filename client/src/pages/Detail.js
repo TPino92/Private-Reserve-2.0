@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 
 import { QUERY_PRODUCTS } from "../utils/queries";
 import spinner from '../assets/spinner.gif'
-import Stars from '../components/Stars'
+import StarRating from '../components/StarRating'
 
 // import { useStoreContext } from "../utils/GlobalState";
 
@@ -110,7 +110,7 @@ function Detail() {
             {currentProduct.description}
           </p>
           <div>
-          <Stars/>
+          <StarRating />
           </div>
           <p>
             <strong>Price:</strong>

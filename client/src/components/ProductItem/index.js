@@ -5,7 +5,7 @@ import { pluralize } from "../../utils/helpers";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
 import { useSelector, useDispatch } from "react-redux";
-import Stars from '../Stars'
+import StarRating from '../StarRating'
 
 
 function ProductItem(item) {
@@ -55,7 +55,7 @@ function ProductItem(item) {
         <p>{name}</p>
       </Link>
       <div>
-        <Stars />
+        <StarRating />
       </div>
       <div>
         <div>{quantity} {pluralize("item", quantity)} in stock</div>

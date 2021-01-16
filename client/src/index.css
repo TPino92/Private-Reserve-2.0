@@ -227,6 +227,13 @@ ul {
 .cursor-pointer {
   cursor: pointer;
 }
+input[type='radio'] {
+  display: none;
+}
+.star {
+  cursor: pointer;
+  transition: color 200ms;
+}
 
 @media screen and (max-width: 768px) {
   .card {

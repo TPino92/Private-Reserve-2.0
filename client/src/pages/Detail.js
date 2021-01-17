@@ -62,9 +62,9 @@ function Detail() {
     }
   }, [products, data, loading, dispatch, id]);
 
-  const addReview = () => {
+  // const addReview = () => {
 
-  }
+  // }
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id)
@@ -129,7 +129,7 @@ function Detail() {
                 Remove from Cart
               </button>
           </p>
-          <ReviewForm />
+          <ReviewForm productId = {currentProduct._id} />
             <ReviewList />
 
           <img

@@ -1,8 +1,7 @@
 const { Schema } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
-const Review = new Schema(
-  {
+const Review = new Schema({
     reviewBody: {
       type: String,
       required: true,
@@ -21,8 +20,7 @@ const Review = new Schema(
   {
     toJSON: {
       getters: true
-    }
-  }
-);
+  } 
+});
 
 module.exports = Review;

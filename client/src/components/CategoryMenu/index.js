@@ -60,3 +60,4 @@ function CategoryMenu() {
 }
 
 export default CategoryMenu;
+// which will be taken up, or imported, into pages ../../pages/Home

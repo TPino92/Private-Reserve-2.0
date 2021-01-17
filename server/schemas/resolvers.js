@@ -2,7 +2,6 @@ const { AuthenticationError } = require('apollo-server-express');
 const { User, Product, Category, Order, Review } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
-
 const resolvers = {
   Query: {
     categories: async () => {
@@ -120,11 +119,12 @@ const resolvers = {
     // },
     addReview: async (parent, args, context) => {
       if (context.user) {
-        const review = await Review.create({ ...args, firstName: context.user.firstName });
-
-        await Product.findByIdAndUpdate(
-          { _id: context.product._id },
-          { $push: { reviews: review._id } },
+        console.log("🤷‍♂️ args", args)
+        // const review = await Review.create({ ...args, firstName: context.user.firstName });
+        const review = await Product.findByIdAndUpdate(
+          { _id: args._id },
+          // { $push: { reviews: review } },
+          { $addToSet: { reviews: { ...args, firstName: context.user.firstName } } },
           { new: true }
         );
 

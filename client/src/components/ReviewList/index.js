@@ -9,7 +9,8 @@ const ReviewList = ({ reviews, title }) => {
   return (
     <div>
       <h3>Previous Reviews</h3>
-     
+      // iterate through the reviews and place - use map
+      // when passing reviews - pass the product 
     </div>
   );
 };

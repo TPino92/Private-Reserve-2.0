@@ -19,10 +19,11 @@ const ReviewForm = ({ productId }) => {
   // submit form
   const handleFormSubmit = async event => {
     event.preventDefault();
-
+    console.log("review body: ", reviewBody)
+    console.log("productId: ", productId)
     try {
       await addReview({
-        variables: { reviewBody }
+        variables: { reviewBody: reviewBody, _id: productId }
       });
 
       // clear form value

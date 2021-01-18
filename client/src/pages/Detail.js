@@ -114,9 +114,7 @@ function Detail() {
             {currentProduct.description}
           </p>
 
-          <p>
-            {currentProduct.reviews}
-          </p>
+
           <p>
             <strong>Price:</strong>
             ${currentProduct.price}
@@ -130,7 +128,7 @@ function Detail() {
               </button>
           </p>
           <ReviewForm productId = {currentProduct._id} />
-            <ReviewList />
+            <ReviewList/>
 
           <img
             src={`/images/${currentProduct.image}`}

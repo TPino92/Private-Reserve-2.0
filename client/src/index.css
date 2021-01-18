@@ -240,7 +240,12 @@ input:focus {
 
 .card {
   width: 25%;
+  height: 475px;
   text-align: center;
+}
+
+.imgCard {
+  height: 200px;
 }
 
 .error-text {

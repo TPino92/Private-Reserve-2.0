@@ -248,6 +248,10 @@ input:focus {
   height: 200px;
 }
 
+.prodName {
+  height: 50px;
+}
+
 .error-text {
   color: var(--error);
 }
@@ -280,5 +284,9 @@ ul {
   .navstyle li a {
     display: block;
     text-align: center;
+  }
+
+  .cart {
+    position: relative;
   }
 }

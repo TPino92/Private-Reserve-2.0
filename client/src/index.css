@@ -145,6 +145,7 @@ button {
 button:hover {
   opacity: .8;
   box-shadow: 5px 5px 5px grey;
+  background-image: linear-gradient(to right, lime, green)
 }
 
 button[disabled] {

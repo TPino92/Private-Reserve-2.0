@@ -1,9 +1,9 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --primary: #2C3531;
+  --secondary: #D1E8E2;
+  --tertiary: #DA7B93;
   --light: #fafafa;
-  --dark: #272f32;
+  --dark: #116466;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
@@ -16,12 +16,13 @@
 html,
 body {
   min-height: 100%;
+  overscroll-behavior: none;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
+  font-family: Arial, 'Karla', sans-serif;
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
@@ -46,6 +47,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  font-weight: bold;
 }
 
 h3 {
@@ -73,18 +75,59 @@ a {
   color: var(--tertiary);
   text-decoration: none;
   font-weight: bold;
+  font-family: Arial, sans-serif;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #DA7B93;
+  text-shadow: 2px 2px 4px rgb(46, 226, 187);
+}
+
+.prodh2 {
+  border-style: double;
+  text-align: center;
+  padding: 30px 0 30px 0;
+  margin: 50px 0 50px 0;
+  border-width: 5px 5px;
 }
 
 header {
   background: var(--primary);
+  height: 150px;
+  background-image: ('./thc-scifi.jpg');
 }
 
 header a {
   color: var(--light);
+}
+
+header h1 {
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 0px;
+}
+
+.navstyle ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.navstyle li {
+  float: right;
+}
+
+.navstyle li a {
+  display: block;
+}
+
+.catDiv {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.catButton {
+  font-size: 24px;
 }
 
 button {
@@ -95,12 +138,14 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 0 1px;
+  margin: 0 5px;
   background-color: rgb(136, 199, 136);
 }
 
 button:hover {
   opacity: .8;
+  box-shadow: 5px 5px 5px grey;
+  background-image: linear-gradient(to right, lime, green)
 }
 
 button[disabled] {
@@ -196,15 +241,53 @@ input:focus {
 
 .card {
   width: 25%;
+  height: 475px;
   text-align: center;
+}
+
+.imgCard {
+  height: 200px;
+}
+
+.prodName {
+  height: 50px;
 }
 
 .error-text {
   color: var(--error);
 }
 
+ul {
+  color: var(--primary)
+}
+
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
+  }
+  .navstyle {
+    margin-left: 0;
+  }
+  .catDiv {
+    position: relative;
+  }
+  .catButton {
+    display: inline-block;
+    padding-top: 5px;
+    margin-top: 5px;
+    width: 50%;
+    font-size: 18px;
+  }
+  .navstyle li {
+    float: none;
+  }
+  
+  .navstyle li a {
+    display: block;
+    text-align: center;
+  }
+
+  .cart {
+    position: relative;
   }
 }

@@ -12,7 +12,7 @@ import {
   ADD_TO_CART,
   UPDATE_PRODUCTS,
 } from '../utils/actions';
-
+import Comments from '../components/Reviews';
 import Cart from '../components/Cart';
 
 import { idbPromise } from "../utils/helpers";
@@ -119,6 +119,7 @@ function Detail() {
                 Remove from Cart
               </button>
           </p>
+          <Reviews />
 
           <img
             src={`/images/${currentProduct.image}`}

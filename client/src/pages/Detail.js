@@ -130,8 +130,9 @@ function Detail() {
               </button>
           </p>
           <ReviewForm productId = {currentProduct._id} />
-            <ReviewList />
-
+            <ReviewList/>
+            This is the ID:: {currentProduct._id}
+            ** This is the product name: {currentProduct.name}
           <img
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}

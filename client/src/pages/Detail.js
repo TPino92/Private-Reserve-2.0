@@ -128,7 +128,7 @@ function Detail() {
               </button>
           </p>
           <ReviewForm productId = {currentProduct._id} />
-            <ReviewList/>
+          <ReviewList/>
 
           <img
             src={`/images/${currentProduct.image}`}

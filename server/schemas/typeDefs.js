@@ -14,7 +14,7 @@ const typeDefs = gql`
     quantity: Int
     price: Float
     category: Category
-    review: [Review]
+    reviews: [Review]
   }
 
   type Review {

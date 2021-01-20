@@ -15,6 +15,10 @@ const ReviewForm = ({ productId }) => {
     }
   };
 
+  function refreshPage(){ 
+    window.location.reload(); 
+}
+
   // submit form
   const handleFormSubmit = async event => {
     event.preventDefault();
@@ -49,7 +53,7 @@ const ReviewForm = ({ productId }) => {
           onChange={handleChange}
         ></textarea>
 
-        <button className="btn col-12 col-md-3" type="submit">
+        <button className="btn col-12 col-md-3" type="submit" onClick={refreshPage}>
           Add Review
         </button>
       </form>

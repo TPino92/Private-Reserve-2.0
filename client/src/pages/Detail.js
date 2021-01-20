@@ -113,14 +113,6 @@ function Detail() {
           <h2>{currentProduct.name}</h2>
 
           <p>
-            {currentProduct.description}
-          </p>
-
-          <p>
-            {/* {currentProduct.reviews} */}
-          </p>
-
-          <p>
             <strong>Price:</strong>
             ${currentProduct.price}
             {" "}
@@ -132,14 +124,17 @@ function Detail() {
                 Remove from Stash
               </button>
           </p>
-          <ReviewForm productId = {currentProduct._id} />
-          <ReviewList reviews = {currentProduct.reviews}/>
 
-          <img
+          <img className="singleprodimg"
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
           />
-
+          <ReviewForm productId = {currentProduct._id} />
+          <ReviewList reviews = {currentProduct.reviews}/>
+          <h4>Product Description</h4>
+          <p>
+            {currentProduct.description}
+          </p>
         </div>
       ) : null}
       {

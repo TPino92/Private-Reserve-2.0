@@ -253,8 +253,31 @@ input:focus {
   height: 50px;
 }
 
+.singleprodimg {
+  height: 300px;
+}
+
+.reviewtitle {
+  margin: 20px 0 20px 0;
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.reviewtext {
+  border-radius: .25rem;
+  background-color: hotpink;
+  text-align: center;
+  color: black;
+}
+
 .error-text {
   color: var(--error);
+}
+
+.card2 {
+  margin: 30px 0 30px 0;
+  width: 30%;
 }
 
 ul {

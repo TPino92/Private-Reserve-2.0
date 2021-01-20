@@ -3,6 +3,9 @@ package-lock.json
 .vscode
 .DS_Store
 
-.idea/
+
 .env
-uploads/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

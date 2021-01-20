@@ -21,6 +21,15 @@ export const QUERY_PRODUCTS = gql`
   }
 `;
 
+// export const QUERY_REVIEW = gql`
+//   query reviews {
+//     Review {
+//       reviewBody
+//       firstName
+//     }
+//   }
+// `;
+
 export const QUERY_ALL_PRODUCTS = gql`
   {
     products {
@@ -70,15 +79,6 @@ export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ID]!) {
     checkout(products: $products) {
       session
-    }
-  }
-`;
-
-export const QUERY_REVIEW = gql`
-  query reviews {
-    Review {
-      reviewBody
-      firstName
     }
   }
 `;

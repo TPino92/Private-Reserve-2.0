@@ -34,7 +34,8 @@ function Detail() {
 
   const { products, cart } = state;
 
-    
+  
+
   useEffect(() => {
     // already in global store
     if (products.length) {
@@ -102,6 +103,7 @@ function Detail() {
 
   return (
     <>
+    {console.log("skdaljhksadhfasdf", currentProduct)}
       {currentProduct ? (
         <div className="container my-1">
           <Link to="/">
@@ -115,7 +117,7 @@ function Detail() {
           </p>
 
           <p>
-            {currentProduct.description}
+            {/* {currentProduct.reviews} */}
           </p>
 
           <p>
@@ -131,7 +133,7 @@ function Detail() {
               </button>
           </p>
           <ReviewForm productId = {currentProduct._id} />
-          <ReviewList/>
+          <ReviewList reviews = {currentProduct.reviews}/>
 
           <img
             src={`/images/${currentProduct.image}`}

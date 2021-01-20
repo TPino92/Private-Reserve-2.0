@@ -16,7 +16,7 @@ export const QUERY_PRODUCTS = gql`
         _id
         reviewBody
         firstName
-      }
+      } 
     }
   }
 `;

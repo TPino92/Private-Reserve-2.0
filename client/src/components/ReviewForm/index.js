@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import { useMutation, useQuery } from '@apollo/react-hooks';
 import { ADD_REVIEW } from '../../utils/mutations';
 
@@ -33,9 +32,7 @@ const ReviewForm = ({ productId }) => {
       console.error(e);
     }
   };
-
-
-
+  
   return (
     <div>
       <p className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}>

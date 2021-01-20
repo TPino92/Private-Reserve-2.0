@@ -3,18 +3,6 @@ import React from 'react';
 
 
 const ReviewList = ({ reviews }) => {
-  // if (!reviews) {
-  //   return <h3>No reviews Yet</h3>;
-  // }
-
-  // return (
-  //   <div>
-  //     <h3>Previous Reviews</h3>
-  //     // iterate through the reviews and place - use map
-  //     // when passing reviews - pass the product 
-  //   </div>
-  // );
-  
 
 
   return (
@@ -26,8 +14,7 @@ const ReviewList = ({ reviews }) => {
         {reviews &&
           reviews.map(review => (
             <p className="pill mb-3" key={review._id}>
-              {review.reviewBody} // {' '}
-                {reviews.firstName} on {reviews.createdAt}
+              {review.reviewBody} by {review.firstName} 
             </p>
           ))}
       </div>

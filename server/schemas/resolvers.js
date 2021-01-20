@@ -8,6 +8,7 @@ const resolvers = {
       return await Category.find();
     },
     products: async (parent, { category, name }) => {
+      console.log("🍕")
       const params = {};
 
       if (category) {
@@ -19,11 +20,16 @@ const resolvers = {
           $regex: name
         };
       }
-
-      return await Product.find(params).populate('category');
+      const awaitVariable = await Product.find(params).populate('category');
+      console.log("awaitVariable 🖐", awaitVariable[2].reviews)
+      return awaitVariable
     },
     product: async (parent, { _id }) => {
-      return await Product.findById(_id).populate('category');
+      console.log('"🌎🌎🌎🌎🌎🌎🌎🌎"');
+      const productsss = await Product.findById(_id).populate('category');
+      
+      return productsss
+
     },
     user: async (parent, args, context) => {
       if (context.user) {
@@ -124,7 +130,7 @@ const resolvers = {
         const review = await Product.findByIdAndUpdate(
           { _id: args._id },
           // { $push: { reviews: review } },
-          { $addToSet: { reviews: { ...args, firstName: context.user.firstName } } },
+          { $addToSet: { reviews: { reviewBody:args.reviewBody, firstName: context.user.firstName } } },
           { new: true }
         );
 

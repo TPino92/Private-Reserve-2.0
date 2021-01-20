@@ -14,6 +14,8 @@ import {
 } from '../utils/actions';
 
 import Cart from '../components/Cart';
+import ReviewList from '../components/ReviewList';
+import ReviewForm from '../components/ReviewForm';
 
 import { idbPromise } from "../utils/helpers";
 
@@ -31,6 +33,8 @@ function Detail() {
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
   const { products, cart } = state;
+
+  
 
   useEffect(() => {
     // already in global store
@@ -58,6 +62,10 @@ function Detail() {
       });
     }
   }, [products, data, loading, dispatch, id]);
+
+  // const addReview = () => {
+
+  // }
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id)
@@ -95,6 +103,7 @@ function Detail() {
 
   return (
     <>
+    {console.log("skdaljhksadhfasdf", currentProduct)}
       {currentProduct ? (
         <div className="container my-1">
           <Link to="/">
@@ -105,6 +114,10 @@ function Detail() {
 
           <p>
             {currentProduct.description}
+          </p>
+
+          <p>
+            {/* {currentProduct.reviews} */}
           </p>
 
           <p>
@@ -119,11 +132,14 @@ function Detail() {
                 Remove from Stash
               </button>
           </p>
+          <ReviewForm productId = {currentProduct._id} />
+          <ReviewList reviews = {currentProduct.reviews}/>
 
           <img
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
           />
+
         </div>
       ) : null}
       {

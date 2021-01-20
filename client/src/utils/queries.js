@@ -12,9 +12,23 @@ export const QUERY_PRODUCTS = gql`
       category {
         _id
       }
+      reviews {
+        _id
+        reviewBody
+        firstName
+      } 
     }
   }
 `;
+
+// export const QUERY_REVIEW = gql`
+//   query reviews {
+//     Review {
+//       reviewBody
+//       firstName
+//     }
+//   }
+// `;
 
 export const QUERY_ALL_PRODUCTS = gql`
   {

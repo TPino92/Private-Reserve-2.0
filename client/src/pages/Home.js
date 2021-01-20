@@ -14,3 +14,4 @@ const Home = () => {
 };
 
 export default Home;
+// which will be taken up by, or imported into, pages App.js file

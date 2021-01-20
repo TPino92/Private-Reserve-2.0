@@ -14,6 +14,14 @@ const typeDefs = gql`
     quantity: Int
     price: Float
     category: Category
+    reviews: [Review]
+  }
+
+  type Review {
+    _id: ID
+    reviewBody: String
+    createdAt: String
+    firstName: String
   }
 
   type Order {
@@ -37,7 +45,7 @@ const typeDefs = gql`
 
   type Query {
     categories: [Category]
-    products(category: ID, name: String): [Product]
+    products(category: ID, name: String, reviews: String): [Product]
     product(_id: ID!): Product
     user: User
     order(_id: ID!): Order
@@ -50,6 +58,7 @@ const typeDefs = gql`
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
+    addReview(_id: ID!, reviewBody: String!): Review
   }
 
   type Checkout {

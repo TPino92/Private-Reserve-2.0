@@ -108,3 +108,4 @@ const Cart = () => {
 };
 
 export default Cart;
+// which will be taken up, or imported, into pages ../../pages/Home

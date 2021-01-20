@@ -37,4 +37,5 @@ Contributions to this app were made by the following:
 * [Trevor Pino](https://github.com/TPino92)  
 * [Fabian Ingram](https://github.com/fabianingram)
 
+![privatereserve](https://user-images.githubusercontent.com/68198938/105250963-e21fdd00-5b37-11eb-91d1-259dffb565b2.png)
 

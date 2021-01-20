@@ -1,9 +1,6 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-
 
 const ReviewList = ({ reviews }) => {
-
 
   return (
     <div className="card2">
@@ -14,7 +11,7 @@ const ReviewList = ({ reviews }) => {
         {reviews &&
           reviews.map(review => (
             <p className="pill mb-3 reviewtext" key={review._id}>
-              {review.firstName}: {review.reviewBody} 
+              {review.firstName} : {review.reviewBody} 
             </p>
           ))}
       </div>

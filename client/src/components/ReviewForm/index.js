@@ -3,9 +3,11 @@ import { useMutation, useQuery } from '@apollo/react-hooks';
 import { ADD_REVIEW } from '../../utils/mutations';
 
 const ReviewForm = ({ productId }) => {
+
   const [reviewBody, setBody] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
   const [addReview, { error }] = useMutation(ADD_REVIEW);
+
 
   // update state based on form input changes
   const handleChange = event => {
@@ -15,9 +17,10 @@ const ReviewForm = ({ productId }) => {
     }
   };
 
+
   function refreshPage(){ 
     window.location.reload(); 
-}
+  }
 
   // submit form
   const handleFormSubmit = async event => {
@@ -28,7 +31,6 @@ const ReviewForm = ({ productId }) => {
       await addReview({
         variables: { reviewBody: reviewBody, _id: productId }
       });
-
       // clear form value
       setBody('');
       setCharacterCount(0);

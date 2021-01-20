@@ -113,16 +113,6 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-    // addReview: async (parent, args, context) => {
-    //   if (context.product._id) {
-    //     const review = await Product.findByIdAndUpdate(
-    //       {_id: context.product._id},
-    //       { $push: { reviews: review._id}},
-    //       {new: true}
-    //     )
-    //     return review;
-    //   }
-    // },
     addReview: async (parent, args, context) => {
       if (context.user) {
         console.log("🤷‍♂️ args", args)

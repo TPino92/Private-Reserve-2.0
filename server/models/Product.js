@@ -32,10 +32,6 @@ const productSchema = new Schema({
   reviews: [Review]
 });
 
-//productSchema.virtual('reviewCount').get(function() {
-//  return this.reviews.length;
-//});
-
 const Product = mongoose.model('Product', productSchema);
 
 module.exports = Product;

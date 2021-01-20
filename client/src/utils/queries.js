@@ -68,3 +68,12 @@ export const QUERY_CHECKOUT = gql`
     }
   }
 `;
+
+export const QUERY_REVIEW = gql`
+  query reviews {
+    Review {
+      reviewBody
+      firstName
+    }
+  }
+`;

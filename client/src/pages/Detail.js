@@ -114,6 +114,10 @@ function Detail() {
             {currentProduct.description}
           </p>
 
+          <p>
+            {currentProduct.description}
+          </p>
+
 
           <p>
             <strong>Price:</strong>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+
 
 const ReviewList = ({ reviews }) => {
   // if (!reviews) {
@@ -13,6 +14,8 @@ const ReviewList = ({ reviews }) => {
   //     // when passing reviews - pass the product 
   //   </div>
   // );
+  
+
 
   return (
     <div className="card mb-3">

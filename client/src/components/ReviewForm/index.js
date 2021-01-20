@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { useMutation } from '@apollo/react-hooks';
+import { useMutation, useQuery } from '@apollo/react-hooks';
 import { ADD_REVIEW } from '../../utils/mutations';
 
 const ReviewForm = ({ productId }) => {
@@ -33,6 +33,8 @@ const ReviewForm = ({ productId }) => {
       console.error(e);
     }
   };
+
+
 
   return (
     <div>

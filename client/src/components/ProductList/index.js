@@ -65,7 +65,6 @@ function ProductList() {
                   name={product.name}
                   price={product.price}
                   quantity={product.quantity}
-                  reviews={product.reviews}
                 />
             ))}
         </div>

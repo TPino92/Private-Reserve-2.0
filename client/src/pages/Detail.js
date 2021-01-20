@@ -100,6 +100,8 @@ function Detail() {
     idbPromise('cart', 'delete', { ...currentProduct });
   };
 
+  console.log(currentProduct)
+
   return (
     <>
       {currentProduct ? (
@@ -113,12 +115,7 @@ function Detail() {
           <p>
             {currentProduct.description}
           </p>
-
-          <p>
-            {currentProduct.description}
-          </p>
-
-
+          
           <p>
             <strong>Price:</strong>
             ${currentProduct.price}
@@ -131,6 +128,7 @@ function Detail() {
                 Remove from Cart
               </button>
           </p>
+
           <ReviewForm productId = {currentProduct._id} />
           <ReviewList/>
 

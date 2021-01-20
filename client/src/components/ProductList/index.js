@@ -78,3 +78,4 @@ function ProductList() {
 }
 
 export default ProductList;
+// which will be taken up, or imported, into pages ../../pages/Home

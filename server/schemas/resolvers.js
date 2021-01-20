@@ -1,14 +1,14 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Product, Category, Order } = require('../models');
+const { User, Product, Category, Order, Review } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
-
 const resolvers = {
   Query: {
     categories: async () => {
       return await Category.find();
     },
     products: async (parent, { category, name }) => {
+      console.log("🍕")
       const params = {};
 
       if (category) {
@@ -20,11 +20,16 @@ const resolvers = {
           $regex: name
         };
       }
-
-      return await Product.find(params).populate('category');
+      const awaitVariable = await Product.find(params).populate('category');
+      console.log("awaitVariable 🖐", awaitVariable[2].reviews)
+      return awaitVariable
     },
     product: async (parent, { _id }) => {
-      return await Product.findById(_id).populate('category');
+      console.log('"🌎🌎🌎🌎🌎🌎🌎🌎"');
+      const productsss = await Product.findById(_id).populate('category');
+      
+      return productsss
+
     },
     user: async (parent, args, context) => {
       if (context.user) {
@@ -107,6 +112,32 @@ const resolvers = {
       }
 
       throw new AuthenticationError('Not logged in');
+    },
+    // addReview: async (parent, args, context) => {
+    //   if (context.product._id) {
+    //     const review = await Product.findByIdAndUpdate(
+    //       {_id: context.product._id},
+    //       { $push: { reviews: review._id}},
+    //       {new: true}
+    //     )
+    //     return review;
+    //   }
+    // },
+    addReview: async (parent, args, context) => {
+      if (context.user) {
+        console.log("🤷‍♂️ args", args)
+        // const review = await Review.create({ ...args, firstName: context.user.firstName });
+        const review = await Product.findByIdAndUpdate(
+          { _id: args._id },
+          // { $push: { reviews: review } },
+          { $addToSet: { reviews: { reviewBody:args.reviewBody, firstName: context.user.firstName } } },
+          { new: true }
+        );
+
+        return review;
+      }
+
+      throw new AuthenticationError('You need to be logged in!');
     },
     updateUser: async (parent, args, context) => {
       if (context.user) {

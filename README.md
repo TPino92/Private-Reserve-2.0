@@ -29,7 +29,7 @@ Uses a web manifest
 Uses a service worker for offline functionality
 Is installable
 Have a polished UI.
-Be responsive.
+Be responsive. 
 Be interactive (i.e., accept and respond to user input).
 Include authentication (JWT).
 Protect sensitive API key information on the server.

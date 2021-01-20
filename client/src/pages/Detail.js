@@ -124,12 +124,12 @@ function Detail() {
             <strong>Price:</strong>
             ${currentProduct.price}
             {" "}
-            <button onClick={addToCart}>Add to cart</button>
+            <button onClick={addToCart}>Add to Stash</button>
             <button 
                 disabled={!cart.find(p => p._id === currentProduct._id)} 
                 onClick={removeFromCart}
               >
-                Remove from Cart
+                Remove from Stash
               </button>
           </p>
           <ReviewForm productId = {currentProduct._id} />

@@ -31,7 +31,7 @@ MongoDB, Mongoose, Express, React.js, Node.js, Heroku
 Contributions to this app were made by the following:
 <br /> 
 
-## Contributors
+### Contributors
 * [Brandi Curley](https://github.com/galacticnative)  
 * [Jesus Manteca](https://github.com/jesusmanteca)  
 * [Trevor Pino](https://github.com/TPino92)  
@@ -39,7 +39,6 @@ Contributions to this app were made by the following:
 
 ![privatereserve](https://user-images.githubusercontent.com/68198938/105250963-e21fdd00-5b37-11eb-91d1-259dffb565b2.png)
 
-![privatereserve](https://user-images.githubusercontent.com/68198938/105250963-e21fdd00-5b37-11eb-91d1-259dffb565b2.png)
 
 ## Table of Creators
 | Letter  | Name |

@@ -40,3 +40,11 @@ Contributions to this app were made by the following:
 ![privatereserve](https://user-images.githubusercontent.com/68198938/105250963-e21fdd00-5b37-11eb-91d1-259dffb565b2.png)
 
 ![privatereserve](https://user-images.githubusercontent.com/68198938/105250963-e21fdd00-5b37-11eb-91d1-259dffb565b2.png)
+
+## Table of Creators
+| Letter  | Name |
+| ------------- | ------------- |
+| A  | Brandi Curley  |
+| B | Jesus Manteca  |
+| C  | Trevor Pino |
+| D | Fabian Ingram  |
